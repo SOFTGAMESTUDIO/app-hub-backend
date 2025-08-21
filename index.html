@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APK Store - Download Android Apps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fab fa-android"></i>
+            <span>APK Store</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Top Apps</a></li>
+                <li><a href="#">New Apps</a></li>
+            </ul>
+        </nav>
+        <button class="btn" id="uploadBtn">
+            <i class="fas fa-plus"></i> Upload APK
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2 class="section-title">Featured Apps</h2>
+        <div class="apps-grid" id="appsGrid">
+            <!-- Apps will be loaded here dynamically -->
+        </div>
+
+        <!-- App Detail View (hidden by default) -->
+        <div class="app-detail" id="appDetail">
+            <!-- Detail content will be loaded here dynamically -->
+        </div>
+    </div>
+
+    <!-- Upload Modal -->
+    <div class="modal" id="uploadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Upload New APK</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label for="appName">App Name</label>
+                        <input type="text" id="appName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="developer">Developer</label>
+                        <input type="text" id="developer" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" class="form-control" required>
+                            <option value="">Select Category</option>
+                            <option value="Game">Game</option>
+                            <option value="Productivity">Productivity</option>
+                            <option value="Education">Education</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Social">Social</option>
+                            <option value="Tools">Tools</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="apkUrl">APK Download URL</label>
+                        <input type="url" id="apkUrl" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="iconUrl">App Icon URL</label>
+                        <input type="url" id="iconUrl" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="screenshots">Screenshot URLs (one per line)</label>
+                        <textarea id="screenshots" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn">
+                        <i class="fas fa-upload"></i> Upload APK
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About APK Store</h3>
+                <p>Your trusted source for Android apps. Download safely and easily.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Top Apps</a></li>
+                    <li><a href="#">New Apps</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Copyright</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 APK Store. All rights reserved.</p>
+        </div>
+    </footer>
+    
+   
+    <script type="module" src="index.js"></script>
+</body>
+</html>
